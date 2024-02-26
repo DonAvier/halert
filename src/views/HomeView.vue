@@ -17,7 +17,9 @@
                 <tr v-for="item in items" :key="item._id">
                     <td>{{ item._id }}</td>
                     <td>{{ item.Name }}</td>
-                    <td>{{ item.Link }}</td>
+                    <td>
+                        <a href="{{ item.Link }}">{{ item.Link }}</a>
+                    </td>
                     <td>{{ item.Description }}</td>
                     <td><router-link :to="'/detail/' + item._id"> controlla andamento </router-link></td>
                 </tr>
